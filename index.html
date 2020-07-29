@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snack Game</title>
+
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+      }
+      #game-board {
+        background-color: #ccc;
+        height: 90vmin;
+        width: 90vmin;
+        align-content: center;
+        display: grid;
+        grid-template-columns: repeat(25, 1fr);
+        grid-template-rows: repeat(25, 1fr);
+      }
+      .snack {
+        background-color: hsl(200, 100%, 50%);
+        border: 0.25vmin solid black;
+      }
+
+      .food {
+        background-color: hsl(50, 100%, 50%);
+        border: 0.25vmin solid black;
+      }
+    </style>
+    <script src="game.js" defer type="module"></script>
+  </head>
+  <body>
+    <div id="game-board"></div>
+  </body>
+</html>

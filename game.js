@@ -4,10 +4,13 @@ import {
   SNACK_SPEED,
 } from "./snack.js";
 
-import { Draw, getRandomXY } from "./food.js";
+import {
+  Draw as DrawFood,
+  UpdateAndDraw,
+} from "./food.js";
 
 let LastRendertime = 0;
-const game_board = document.getElementById("game-board");
+export const game_board = document.getElementById("game-board");
 
 function main(currentTime) {
   window.requestAnimationFrame(main);
@@ -23,10 +26,10 @@ function update() {
   updatSnack();
 }
 
-function draw() {
+export function draw() {
   game_board.innerHTML = "";
   drawSnack(game_board);
-  Draw(game_board);
+  DrawFood();
 }
 
 window.requestAnimationFrame(main);

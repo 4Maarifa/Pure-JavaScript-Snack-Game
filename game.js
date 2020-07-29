@@ -4,10 +4,7 @@ import {
   SNACK_SPEED,
 } from "./snack.js";
 
-import {
-  Draw as DrawFood,
-  UpdateAndDraw,
-} from "./food.js";
+import { Draw as DrawFood } from "./food.js";
 
 let LastRendertime = 0;
 export const game_board = document.getElementById("game-board");
